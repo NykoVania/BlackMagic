@@ -1,0 +1,123 @@
+local Assail = game.Players.LocalPlayer.Backpack.Assailant
+local Cool = Assail.Cooldowns
+local Char = game.Players.LocalPlayer.Character
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Q and Cool.Guardbreak.Value == 0 and Char.Conditions.Heat.Value == 0 < 200 then
+            AnimationId = "5779600544"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.One and Cool["1"].Value == 0 then
+            AnimationId = "3372690528"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Two and Cool["2"].Value == 0 then
+            AnimationId = "3489974985"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Three and Cool["3"].Value == 0 then
+            AnimationId = "3380721445"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Four and Cool["4"].Value == 0 then
+            AnimationId = "3513488289"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Five and Cool["5"].Value == 0 then
+            AnimationId = "3498258946"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Six and Cool["6"].Value == 0 then
+            AnimationId = "3437582310"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+            wait(0.3)
+        end
+        end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Eight and Cool["8"].Value == 0 then
+            AnimationId = "4309309202"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+
+UserInputService.InputBegan:connect(function(inst)
+        if inst.KeyCode == Enum.KeyCode.Seven and Cool["7"].Value == 0 then
+            AnimationId = "4434453913"
+            local Anim = Instance.new("Animation")
+            Anim.AnimationId = "rbxassetid://" .. AnimationId
+            local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+            wait(0.1)
+            k:Play()
+            k:AdjustSpeed(1)
+        end
+    end
+)
+UserInputService.InputBegan:Connect(Input)
