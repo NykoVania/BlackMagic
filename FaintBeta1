@@ -69,7 +69,7 @@ UserInputService.InputBegan:connect(function(inst)
 )
 
 UserInputService.InputBegan:connect(function(inst)
-        if inst.KeyCode == Enum.KeyCode.Five and Cool["5"].Value == 0 then
+        if inst.KeyCode == Enum.KeyCode.R and Cool["5"].Value == 0 then
             AnimationId = "3498258946"
             local Anim = Instance.new("Animation")
             Anim.AnimationId = "rbxassetid://" .. AnimationId
@@ -82,7 +82,7 @@ UserInputService.InputBegan:connect(function(inst)
 )
 
 UserInputService.InputBegan:connect(function(inst)
-        if inst.KeyCode == Enum.KeyCode.Six and Cool["6"].Value == 0 then
+        if inst.KeyCode == Enum.KeyCode.G and Cool["6"].Value == 0 then
             AnimationId = "3437582310"
             local Anim = Instance.new("Animation")
             Anim.AnimationId = "rbxassetid://" .. AnimationId
@@ -96,7 +96,7 @@ UserInputService.InputBegan:connect(function(inst)
 )
 
 UserInputService.InputBegan:connect(function(inst)
-        if inst.KeyCode == Enum.KeyCode.Eight and Cool["8"].Value == 0 then
+        if inst.KeyCode == Enum.KeyCode.Six and Cool["8"].Value == 0 then
             AnimationId = "4309309202"
             local Anim = Instance.new("Animation")
             Anim.AnimationId = "rbxassetid://" .. AnimationId
@@ -109,7 +109,7 @@ UserInputService.InputBegan:connect(function(inst)
 )
 
 UserInputService.InputBegan:connect(function(inst)
-        if inst.KeyCode == Enum.KeyCode.Seven and Cool["7"].Value == 0 then
+        if inst.KeyCode == Enum.KeyCode.Five and Cool["7"].Value == 0 then
             AnimationId = "4434453913"
             local Anim = Instance.new("Animation")
             Anim.AnimationId = "rbxassetid://" .. AnimationId
