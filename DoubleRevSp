@@ -1,0 +1,33 @@
+local uis = game:GetService("UserInputService")
+local Player = game.Players.LocalPlayer
+local CoolVariable
+local EvenCoolerVariable
+uis.InputEnded:connect(function(input)
+    if input.KeyCode == Enum.KeyCode.One then
+        CoolVariable = false
+    end
+end)
+
+uis.InputBegan:connect(function(input)
+    if input.KeyCode == Enum.KeyCode.One then
+        CoolVariable = true
+    end
+end)
+uis.InputEnded:connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Two then
+        EvenCoolerVariable = false
+    end
+end)
+
+uis.InputBegan:connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Two then
+        EvenCoolerVariable = true
+    end
+end)
+while wait() do
+    if CoolVariable == true then
+        game:GetService("Players").LocalPlayer.Backpack.Revenant.Signals.SendData:FireServer("DoMove", "SP1", false)
+    elseif EvenCoolerVariable == true then
+        game:GetService("Players").LocalPlayer.Backpack.Revenant.Signals.SendData:FireServer("DoMove", "SP2", false)
+end
+end
