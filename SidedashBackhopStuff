@@ -8,7 +8,7 @@ UserInputService.InputBegan:Connect(function(input,gameEvent)
         if not DoubleDebounce then
             DoubleDebounce = true
             spawn(function()
-                wait(.25)
+                wait(.2)
                 DoubleDebounce = false
             end)
         elseif DoubleDebounce then
@@ -25,7 +25,7 @@ UserInputService.InputBegan:Connect(function(input,gameEvent)
         if not DoubleDebounce2 then
             DoubleDebounce2 = true
             spawn(function()
-                wait(.25)
+                wait(.2)
                 DoubleDebounce2 = false
             end)
         elseif DoubleDebounce2 then
