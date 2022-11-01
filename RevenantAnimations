@@ -1,0 +1,168 @@
+-- OFFICIAL FILE FOR REVENANT
+-- Created by: Nyko#8409 :)
+local UserInputService = game:GetService("UserInputService")
+local Player = game:GetService("Players").LocalPlayer
+local Character = Player.Character
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Resources = ReplicatedStorage.ClassesResources
+local ClassUsing = Player.Class.Value
+local Class = Player.Backpack[ClassUsing]
+local Cooldowns = Class.Cooldowns
+local FakeFrame = Class.AnimationsFakeKeyframes
+local Debounce1 = false
+local Debounce2 = false
+local Debounce3 = false
+local Debounce4 = false
+local Debounce5 = false
+local Debounce6 = false
+local Debounce7 = false
+local Debounce8 = false
+local DebounceQ = false
+local DebounceE = false
+local DebounceR = false
+local DebounceZ = false
+local DebounceX = false
+local DebounceJZ = false
+local DebounceJX = false
+local LocalConditions = Character.LocalConditions
+
+for i, v in pairs(Cooldowns:GetDescendants()) do
+    v:GetPropertyChangedSignal("Value"):Connect(function()
+        if v.Value == 0 and v.Name == "1" then
+            Debounce1 = false
+        elseif 
+            v.Value == 0 and v.Name == "2" then
+            Debounce2 = false
+        elseif 
+            v.Value == 0 and v.Name == "3" then
+            Debounce3 = false
+        elseif 
+            v.Value == 0 and v.Name == "4" then
+            Debounce4 = false
+        elseif 
+            v.Value == 0 and v.Name == "5" then
+            Debounce5 = false
+        elseif 
+            v.Value == 0 and v.Name == "6" then
+            Debounce6 = false
+        elseif 
+            v.Value == 0 and v.Name == "7" then
+            Debounce7 = false
+        elseif 
+            v.Value == 0 and v.Name == "8" then
+            Debounce8 = false
+        elseif 
+            v.Value == 0 and v.Name == "Launcher" then
+            DebounceR = false
+        elseif 
+            v.Value == 0 and v.Name == "Guardbreak" then
+            DebounceQ = false
+        elseif 
+            v.Value == 0 and v.Name == "Breakdown" then
+            DebounceE = false
+        end
+    end
+    )
+end
+----------------------------------------
+Resources.Revenant.Animations.IdleEquipped.AnimationId = Resources.Imperium.Animations.Idle.AnimationId
+Resources.Revenant.Animations.SprintEquipped.AnimationId = Resources.Imperium.Animations.Sprint.AnimationId
+Resources.Revenant.Animations.BackWalkUnequipped.AnimationId = Resources.Aggressor.Animations.BackWalk.AnimationId
+Resources.Revenant.Animations.IdleUnequipped.AnimationId = Resources.Faint.Animations.Idle.AnimationId
+---------------------------------------------
+-----------------------------------------------
+UserInputService.InputBegan:connect(function(Instance)
+    if Instance.KeyCode == Enum.KeyCode.R and DebounceR == false and Class.ClassProperties.Equipped.Value == true then
+        repeat
+            wait()
+            for i,Animation in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do
+               if Animation.Name == "Animation" then
+                wait()
+                Animation:Stop()
+                DebounceR = true
+                AnimVal = Character.Humanoid:LoadAnimation(Resources.Imperium.Animations["Launcher"])
+                AnimVal.Priority = Enum.AnimationPriority.Action4
+                AnimVal:Play()
+                end
+            end
+        until DebounceR == true
+    end
+end)
+
+UserInputService.InputBegan:connect(function(Instance)
+    if Instance.KeyCode == Enum.KeyCode.One and Debounce1 == false and LocalConditions.InAir.Value == true then
+        repeat
+            wait()
+            for i,Animation in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do
+               if Animation.Name == "Animation" then
+                wait()
+                Animation:Stop()
+                Debounce1 = true
+                local AnimVal = Character.Humanoid:LoadAnimation(Resources.Aggressor.Animations["JX"])
+                AnimVal.Priority = Enum.AnimationPriority.Action4
+                AnimVal:Play()
+                end
+            end
+        until Debounce1 == true
+    end
+end)
+UserInputService.InputBegan:connect(function(Instance)
+    if Instance.KeyCode == Enum.KeyCode.Q and DebounceQ == false then
+        repeat
+            wait()
+            for i,Animation in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do
+               if Animation.Name == "Animation" then
+                wait()
+                Animation:Stop()
+                DebounceQ = true
+                local AnimVal = Character.Humanoid:LoadAnimation(Resources.Kurai.Animations["Guardbreak"])
+                AnimVal.Priority = Enum.AnimationPriority.Action4
+                AnimVal:Play(6,2,1)
+                end
+            end
+        until DebounceQ == true
+    end
+end)
+UserInputService.InputBegan:connect(function(input, gameProccesedEvent)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 and DebounceZ == false and LocalConditions.InAir.Value == false and not FakeFrame:FindFirstChild("AC1Unequipped") and not FakeFrame:FindFirstChild("AC2Unequipped") and not FakeFrame:FindFirstChild("AC3Unequipped") and not FakeFrame:FindFirstChild("AC4Equipped") and Class.ClassProperties.Equipped.Value == false then                                  
+        repeat
+            wait()
+            for i,Animation in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do
+               if Animation.Name == "Animation" then
+                wait()
+                Animation:Stop()
+                DebounceZ = true
+                local AnimVal = Character.Humanoid:LoadAnimation(Resources.Aggressor.Animations["AC2"])
+                AnimVal.Priority = Enum.AnimationPriority.Action4
+                AnimVal:Play(0,1,1.7)
+                end
+            end
+        until DebounceZ == true
+        DebounceZ = false
+    end
+end)
+UserInputService.InputBegan:connect(function(input, gameProccesedEvent)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 and DebounceZ == false and Class.ClassProperties.Equipped.Value == true and FakeFrame:FindFirstChild("AC3Unequipped") ~= nil then                                  
+        repeat
+            wait()
+            for i,Animation in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do
+               if Animation.Name == "Animation" then
+                wait()
+                Animation:Stop()
+                DebounceZ = true
+                local AnimVal = Character.Humanoid:LoadAnimation(Resources.Imperium.Animations["AC2"])
+                AnimVal.Priority = Enum.AnimationPriority.Action4
+                AnimVal:Play()
+                end
+            end
+        until DebounceZ == true
+        DebounceZ = false
+    end
+end)
+
+
+
+
+
+
+UserInputService.InputBegan:Connect(Input)
