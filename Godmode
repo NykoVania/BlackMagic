@@ -1,2 +1,0 @@
---lol.
-game.Players.LocalPlayer.Character.Bindables.HitRequest:Destroy()
